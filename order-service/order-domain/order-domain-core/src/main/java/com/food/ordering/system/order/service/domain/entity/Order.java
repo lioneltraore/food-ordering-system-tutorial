@@ -118,8 +118,6 @@ public class Order extends AggregateRoot<OrderID> {
             throw new OrderDomainException("Order is not in correct state for initialization!");
         }
     }
-    
-    
 
     private void initializeOrderItems() {
         long itemID = 1;
