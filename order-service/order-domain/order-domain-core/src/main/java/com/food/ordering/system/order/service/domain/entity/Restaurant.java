@@ -15,6 +15,9 @@ public class Restaurant extends AggregateRoot<RestaurantID> {
         active = builder.active;
     }
 
+    public static Builder builder() {
+        return new Builder();
+    }
 
     public List<Product> getProducts() {
         return products;
@@ -36,7 +39,7 @@ public class Restaurant extends AggregateRoot<RestaurantID> {
             return new Builder();
         }
 
-        public Builder id(RestaurantID val) {
+        public Builder restaurantID(RestaurantID val) {
             restaurantID = val;
             return this;
         }

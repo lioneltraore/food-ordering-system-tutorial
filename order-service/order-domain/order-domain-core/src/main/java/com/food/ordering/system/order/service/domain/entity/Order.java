@@ -35,6 +35,10 @@ public class Order extends AggregateRoot<OrderID> {
         failureMessages = builder.failureMessages;
     }
 
+    public static Builder builder() {
+        return new Builder();
+    }
+
     public void initializeOrder() {
         setId(new OrderID(UUID.randomUUID()));
         trackingID = new TrackingID(UUID.randomUUID());
