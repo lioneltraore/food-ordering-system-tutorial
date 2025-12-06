@@ -43,7 +43,8 @@ public class OrderTestConfiguration {
         return Mockito.mock(RestaurantRepository.class);
     }
 
+    @Bean
     public OrderDomainService orderDomainService() {
-        return Mockito.mock(OrderDomainServiceImpl.class);
+        return new OrderDomainServiceImpl();
     }
 }
